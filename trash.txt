@@ -11,3 +11,51 @@ myButton.addEventListener('click', doSomething, false)
 function doSomething() {
 	myText.textContent = "hello, world!";
 }
+
+
+
+
+
+
+
+
+TABSTUFF
+
+
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'FA')">Find Artists</a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'OH')">Offer Help</a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'LI')">Login</a></li>
+  
+  
+  <div id="FA" class="tabcontent">
+  <h2>What type of art service are you looking for?</h2>
+  <form action="">
+  	<input type="checkbox" name="Photographer" value="GD">Graphic Designer<br>
+  	<input type="checkbox" name="Musician" value="PG"> Photographer<br>
+  	<input type="checkbox" name="Musician" value="MC"> Musician<br>
+  	<input type="checkbox" name="Musician" value="OT"> Other<br>
+  	<input type="submit" class = "button" value="Get Started!">
+  </form>
+</div>
+
+
+
+<div id="OH" class="tabcontent">
+  <h2>What art service are you willing to offer?</h2>
+  <form action="">
+  	<input type="checkbox" name="Photographer" value="GD"> Graphic Designer<br>
+  	<input type="checkbox" name="Musician" value="PG"> Photographer<br>
+  	<input type="checkbox" name="Musician" value="MC"> Musician<br>
+  	<input type="checkbox" name="Musician" value="OT"> Other<br>
+  	<input type="submit" class = "button"  value="Get Started!">
+  </form>
+
+</div>
+
+<div id="LI" class="tabcontent">
+    <form action="login.php">
+      Username: <input type="text" name="Username"><br>
+      Password: <input type="text" name="Password"><br>
+      <input type="submit" class = "button" value="Submit">
+    </form>
+</div>

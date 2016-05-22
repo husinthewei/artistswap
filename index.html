@@ -43,24 +43,53 @@ ul.tab li a:focus, .active {
 
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+   
     border: none;
     border-top: none;
 }
 
 html { 
-  background: url(Photographer.jpg) no-repeat center center fixed; 
+  background: url(creativity.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-h3 {
+h5{
+    min-height: 6;
+    float: right;
+    padding: 20px 6px;
+}
+
+h4{
+    text-align: center;
+    float: right;
+     padding: 0px 6px;
+}
+
+h3{
+ 	font-family: Verdana, Geneva, sans-serif;
+	line-height: 1.25; 
+	margin: 0 0 10px; 
+	font-size: 20px; 
+	font-weight: bold;    
+}
+
+h2{
+ 	font-family: 'Enriqueta', arial, serif;
+	line-height: 1.25; 
+	margin: 0 0 10px; 
+	color: #e1f000;
+	font-size: 30px; 
+	font-weight: bold;    
+}
+h1 {
 	font-family: 'Enriqueta', arial, serif;
 	line-height: 1.25; 
 	margin: 0 0 10px; 
-	font-size: 40px; 
+	color: #FFFFFF;
+	font-size: 20px; 
 	font-weight: bold; 
 }
 
@@ -104,75 +133,56 @@ h3 {
 
 
 <body>
-
-	
 <ul class="tab">
   <li><img src="TempLogo.png" alt="logo" height="60" width="90"></li>
-  <li><a href="#" class="tablinks" onclick="openTab(event, 'HE')">Home</a></li>
-  <li><a href="#" class="tablinks" onclick="openTab(event, 'FA')">Find Artists</a></li>
-  <li><a href="#" class="tablinks" onclick="openTab(event, 'OH')">Offer Help</a></li>
-  <li><a href="#" class="tablinks" onclick="openTab(event, 'LI')">Login</a></li>
-  <li><a href="#" class="tablinks" onclick="openTab(event, 'AB')">About</a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'HP')"><h3>Home</h3></a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'Music')"><h3>Music</h3></a></li>  
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'Photo')"><h3>Photo</h3></a></li>   
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'Film')"><h3>Film</h3></a></li>  
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'GD')"><h3>Graphic Design</h3></a></li>   
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'Fasion')"><h3>Fashion</h3></a></li>  
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'Spaces')"><h3>Spaces/Studios</h3></a></li>   
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'Dance')"><h3>Dance</h3></a></li>  
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'Misc')"><h3>Misc.</h3></a></li>     
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'About')"><h3>About</h3></a></li>
+  
+  <a href="Profile.php"><h5>My Profile</h5></a>
+  <a href="CreateAccount.php"><h4>create account</h4></a>
+  <h4>/</h4> 
+  <a href="Login.php"><h4>login</h4></a>
+
 </ul>
 
-<div id="FA" class="tabcontent">
-  <h3>What type of art service are you looking for?</h3>
-  <form action="">
-  	<input type="checkbox" name="Photographer" value="GD"> Graphic Designer<br>
-  	<input type="checkbox" name="Musician" value="PG"> Photographer<br>
-  	<input type="checkbox" name="Musician" value="MC"> Musician<br>
-  	<input type="checkbox" name="Musician" value="OT"> Other<br>
-  	<input type="submit" class = "button" value="Get Started!">
-  </form>
+<div id = "HP" class = "tabcontent">
+    <h2>This is the homepage</h2>
+    <h1>SampleTextSampleTextSampleTextSampleTextSampleTextSampleTextSampleText</h1>
+    <h1>SampleTextSampleTextSampleTextSampleTextSampleTextSampleTextSampleText</h1>
+    <h1>SampleTextSampleTextSampleTextSampleTextSampleTextSampleTextSampleText</h1>
+    <h1>SampleTextSampleTextSampleTextSampleTextSampleTextSampleTextSampleText</h1>
 </div>
 
-<div id = "HE" class = "tabcontent">
-    
-</div>
 
-<div id="OH" class="tabcontent">
-  <h3>What art service are you willing to offer?</h3>
-  <form action="">
-  	<input type="checkbox" name="Photographer" value="GD"> Graphic Designer<br>
-  	<input type="checkbox" name="Musician" value="PG"> Photographer<br>
-  	<input type="checkbox" name="Musician" value="MC"> Musician<br>
-  	<input type="checkbox" name="Musician" value="OT"> Other<br>
-  	<input type="submit" class = "button"  value="Get Started!">
-  </form>
-
+<div id="About" class="tabcontent">
+  <h2>About</h2>
+  <h1>This is the framework for the website's general concept.</h1>
 </div>
-
-<div id="LI" class="tabcontent">
-    <form action="login.php">
-      Username: <input type="text" name="Username"><br>
-      Password: <input type="text" name="Password"><br>
-      <input type="submit" class = "button" value="Submit">
-    </form>
-</div>
-
-<div id="AB" class="tabcontent">
-  <h3>About</h3>
-  <p>This is the framework for the website's general concept.</p>
-</div>
-	
 	
 	
 <script>
+    openTab(null, "HP");
 	function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tabcontent.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tabcontent.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-//index.html
 </script>
 
 </body>
