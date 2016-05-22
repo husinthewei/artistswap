@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Artist Matchmaker Site</title>
+<style type="text/css">
+body {font-family: "Lato", sans-serif;}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+ul.tab li {float: left;}
+
+
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+}
+
+html { 
+  background: url(Photographer.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h3 {
+	font-family: 'Enriqueta', arial, serif;
+	line-height: 1.25; 
+	margin: 0 0 10px; 
+	font-size: 40px; 
+	font-weight: bold; 
+}
+
+.button {
+   border-top: 1px solid #f79797;
+   background: #d66565;
+   background: -webkit-gradient(linear, left top, left bottom, from(#9c493e), to(#d66565));
+   background: -webkit-linear-gradient(top, #9c493e, #d66565);
+   background: -moz-linear-gradient(top, #9c493e, #d66565);
+   background: -ms-linear-gradient(top, #9c493e, #d66565);
+   background: -o-linear-gradient(top, #9c493e, #d66565);
+   padding: 13px 26px;
+   -webkit-border-radius: 11px;
+   -moz-border-radius: 11px;
+   border-radius: 11px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 24px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #cf577f;
+   background: #cf577f;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #5c1b1b;
+   background: #5c1b1b;
+   }
+</style>
+
+</style>
+</head>
+
+
+
+
+<body>
+
+	
+<ul class="tab">
+  <li><img src="TempLogo.png" alt="logo" height="60" width="90"></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'HE')">Home</a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'FA')">Find Artists</a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'OH')">Offer Help</a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'LI')">Login</a></li>
+  <li><a href="#" class="tablinks" onclick="openTab(event, 'AB')">About</a></li>
+</ul>
+
+<div id="FA" class="tabcontent">
+  <h3>What type of art service are you looking for?</h3>
+  <form action="">
+  	<input type="checkbox" name="Photographer" value="GD"> Graphic Designer<br>
+  	<input type="checkbox" name="Musician" value="PG"> Photographer<br>
+  	<input type="checkbox" name="Musician" value="MC"> Musician<br>
+  	<input type="checkbox" name="Musician" value="OT"> Other<br>
+  	<input type="submit" class = "button" value="Get Started!">
+  </form>
+</div>
+
+<div id = "HE" class = "tabcontent">
+    
+</div>
+
+<div id="OH" class="tabcontent">
+  <h3>What art service are you willing to offer?</h3>
+  <form action="">
+  	<input type="checkbox" name="Photographer" value="GD"> Graphic Designer<br>
+  	<input type="checkbox" name="Musician" value="PG"> Photographer<br>
+  	<input type="checkbox" name="Musician" value="MC"> Musician<br>
+  	<input type="checkbox" name="Musician" value="OT"> Other<br>
+  	<input type="submit" class = "button"  value="Get Started!">
+  </form>
+
+</div>
+
+<div id="LI" class="tabcontent">
+    <form action="login.php">
+      Username: <input type="text" name="Username"><br>
+      Password: <input type="text" name="Password"><br>
+      <input type="submit" class = "button" value="Submit">
+    </form>
+</div>
+
+<div id="AB" class="tabcontent">
+  <h3>About</h3>
+  <p>This is the framework for the website's general concept.</p>
+</div>
+	
+	
+	
+<script>
+	function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+//index.html
+</script>
+
+</body>
+
+
+
+
+</html>
